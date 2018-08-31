@@ -1,0 +1,64 @@
+.Tile {
+  width: 6vw;
+  height: 6vw;
+  color: black;
+  background-color: white;
+  text-align: center;
+  vertical-align: middle;
+  line-height: 6vw;
+  font-size: 3em;
+
+  &.number {
+    &.is_valid {
+      background-color: green;
+    }
+
+    &.is_invalid {
+      background-color: red;
+    }
+
+    &.is_touched {
+      background-color: tan;
+    }
+  }
+
+  &.operator {
+    &.is_valid {
+      background-color: green;
+    }
+
+    &.is_invalid {
+      background-color: red;
+    }
+  }
+
+  &.blank {
+    background-color: black;
+  }
+
+  &.solution_vertical {
+    color: white;
+    background-color: black;
+
+    &.is_valid {
+      color: green;
+    }
+
+    &.is_invalid {
+      color: red;
+    }
+  }
+
+  &.solution_horizontal {
+    color: white;
+    background-color: black;
+
+    &.is_valid {
+      color: green;
+    }
+
+    &.is_invalid {
+      color: red;
+    }
+  }
+}

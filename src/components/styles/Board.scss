@@ -1,0 +1,9 @@
+.Board {
+  background-color: black;
+  & > .Row {
+
+    & > * {
+      display: inline-block;
+    }
+  }
+}
