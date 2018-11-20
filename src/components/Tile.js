@@ -6,7 +6,7 @@ import './styles/Tile.css'
 
 class Tile extends Component {
   render() {
-    let { tileType, value, isValid, isInvalid, isTouched } = this.props
+    let { tileType, value, isValid, isInvalid, isTouched, hideValue, guessValue } = this.props
     isValid = isValid || false
     isInvalid = isInvalid || false
 
@@ -22,8 +22,10 @@ class Tile extends Component {
       }
     }
 
+    let txt = !!hideValue ? guessValue || '' : value
+
     return (
-      <div className={className}>{value}</div>
+      <div className={className}>{txt}</div>
     )
   }
 }
@@ -33,7 +35,9 @@ Tile.propTypes = {
   value: PropTypes.string,
   isValid: PropTypes.bool,
   isInvalid: PropTypes.bool,
-  isTouched: PropTypes.bool
+  isTouched: PropTypes.bool,
+  hideValue: PropTypes.bool,
+  guessValue: PropTypes.bool
 }
 
 export default Tile
